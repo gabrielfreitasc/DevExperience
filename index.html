@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/img/logoIcon.ico" type="x-icon">
+    <title>Profile Dev</title>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#home"><img  class="logo" src="./assets/img/logo.png" alt="Logo Gabriel Freitas em tag"></a>
+        <nav>
+            <ul class="menu">
+                <a class="page" href="#Home">Home</a>
+                <a class="page" href="#sobre">Sobre</a>
+                <a class="page" href="#experiencia">Experiencia</a>
+                <a class="page" href="#projetos">Projetos</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="lobby" id="home">
+            <div class="lobby-left">
+                <h1>OLÁ, EU SOU</h1>
+                <span id="letters" class="name"></span>
+                <h1>DESENVOLVEDOR BACK-END & FRONT-END</h1>
+
+                <div class="lobby-button">
+                    <div class="box-github">
+                        <a href="https://github.com/gabrielfreitasc" target="_blank"><button class="github"><img src="./assets/img/github.png" alt="">GitHub</button></a>
+                    </div>
+                    <div class="box-linkedin">
+                        <a href="https://www.linkedin.com/in/gabriel-freitasdev/" target="_blank"><button class="linkedin"><img src="./assets/img/linkedin.png">Linkedin</button></a>
+                    </div>                    
+                </div>
+
+            </div>
+            <div class="lobby-right">
+                <img class="developer" src="./assets/img/lobbyright.png" alt="">
+            </div>
+    </section>
+    <section class="sobre-mim" id="sobre">
+        <div class="sobre-mim-img">
+            <img src="./assets/img/profile.png" alt="">
+        </div>
+        <div class="sobre-mim-description">
+            <h2>SOBRE MIM</h2>
+            <h3>Uberlândia, Minas Gerais</h3>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officiis tempore quidem totam voluptate quibusdam, accusantium veniam cupiditate non aliquam! Nisi ab nostrum corporis, sint amet impedit. Voluptate, saepe reiciendis?</p>
+            <div class="sobre-mim-buttons">
+                <a href="./assets/Gabriel_Freitas.pdf" download>
+                    <button class="curriculo">
+                        <img src="./assets/img/document.png" alt="Nuvem de download">
+                        Currículo
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="./assets/js/textlobby.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".developer"));
+    </script>
+</body>
+</html>

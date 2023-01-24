@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap');
+
+body {
+    background: #121212;
+    font-family: 'Montserrat';
+}
+
+header {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 2040px;
+    height: 100px;
+    border-bottom: 3px solid #1d1c1c;
+}
+
+.page {
+    text-decoration: none;
+    position: relative;
+    color: #efedf0da;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-right: 50px;
+
+    letter-spacing: 0.5px;
+    padding: 0 10px
+}
+
+.page:hover {
+    color: #ffffff;
+}
+
+.page:after {
+    content: " ";
+    position: absolute;
+    background-color: #6a0392;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.page:hover:after {
+    width: 100%;
+}
+
+.logo {
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition-delay: 0.1s;
+}
+
+/*Lobby*/
+
+.lobby {
+    padding: 2%;
+    margin-top: 80px;
+    display: flex;
+
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.lobby-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+
+.lobby h1 {
+    font-size: 50px;
+    color: #efedf0da;
+}
+
+.lobby span{
+    font-size: 85px;
+    color: #6a0392;
+}
+
+/*Animation Text page lobby*/
+
+/* .name {
+    position: relative;
+}
+
+.name::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid #ffffff;
+
+    animation: typing 2s steps(10) normal;
+    background: #121212;
+} */
+
+/*finish animation text page lobby*/
+
+.lobby-button {
+    display: flex;
+    gap: 80px;
+
+    width: 100%;
+    height: 100%; 
+
+    margin-top: 50px;
+}
+
+.lobby-button button {
+    width: 200px;
+    height: 75px;
+    align-items: center;
+    font-family: "Poppins";
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+}
+
+.lobby-button button:hover {
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lobby-button img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.lobby-button .linkedin {
+    background: #121212;
+    border-radius: 8px;
+    border: 2px solid transparent;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.linkedin::before, .linkedin::after{
+    content: "";
+    z-index: -1;
+    border-radius: 8px;
+    position: absolute;
+    width: 205px;
+    height: 80px;
+    background: linear-gradient(45deg, #8400ff 0%, #340077 49%, #4400ff 80%, #2600ff 100%);
+    background-size: 100%;
+    animation: bording 8s linear infinite;
+}
+
+.linkedin::after {
+    filter: blur(20px)
+}
+
+.lobby-button .github {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #121212;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.github::before, .github::after {
+    content: "";
+    z-index: -1;
+    border-radius: 8px;
+    position: absolute;
+    width: 205px;
+    height: 80px;
+    background: linear-gradient(45deg, #ffffff 0%, #c69bff 49%, #803ffa 80%, #6f00ff 100%);
+    background-size: 100%;
+    animation: bording 8s linear infinite;
+}
+
+.github::after {
+    filter: blur(10px)
+}
+
+.lobby-right {
+    width: 50%;
+}
+
+.lobby-right img {
+    width: 800px;
+    height: 700px;
+}
+
+/*Page Sobre Mim*/
+
+.sobre-mim {
+    background: #151515;
+    width: 100%;
+    height: 100%;
+
+    padding: 2%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.sobre-mim-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: #efedf0da;
+}
+
+.sobre-mim-description h3 {
+    font-size: 25px;
+    margin: 40px 0;
+}
+
+.sobre-mim-description .text {
+    font-size: 25px;
+    font-family: 'Inter';
+}
+
+.sobre-mim-buttons {
+    width: 200px;
+    height: 75px;
+    font-family: "Poppins";
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+}
+
+.sobre-mim-buttons button {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.curriculo {
+    margin-top: 50px;
+    width: 200px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: transparent;
+    border-radius: 8px;
+    border: 3px solid #6a0392;
+
+    align-items: center;
+}
+
+.curriculo:hover {
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sobre-mim-img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Scroll Bar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #6a0392;
+}
+
+/*Animations*/
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+@keyframes bording {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
