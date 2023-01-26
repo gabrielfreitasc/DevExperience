@@ -14,13 +14,18 @@ header {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
+#menu  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #121212;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    max-width: 2040px;
-    height: 100px;
+    height: 80px;
     border-bottom: 3px solid #1d1c1c;
 }
 
@@ -28,7 +33,7 @@ header {
     text-decoration: none;
     position: relative;
     color: #efedf0da;
-    font-size: 25px;
+    font-size: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     margin-right: 50px;
@@ -58,9 +63,9 @@ header {
 
 .logo {
     margin-left: 50px;
-    margin-top: 10px;
-    width: 150px;
-    height: 150px;
+    margin-top: 7px;
+    width: 100px;
+    height: 100px;
 
     transition: 0.5s all ease-in-out;
     cursor: pointer;
@@ -71,53 +76,44 @@ header {
     transition-delay: 0.1s;
 }
 
+/*Pre-config todas as pages*/
+.lobby, .sobre-mim, .experiencia, .projetos {
+    padding: 6.5% 15%;
+    min-height: 35vh;
+}
+
 /*Lobby*/
 
 .lobby {
-    padding: 2%;
+    padding: 5%;
     margin-top: 80px;
+    margin-bottom: 40px;
     display: flex;
 
     justify-content: space-around;
     flex-direction: row;
+    
 }
+
+    /*Lado esquerdo do Lobby*/
 
 .lobby-left {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
+    margin-right: 80px;
 }
 
 .lobby h1 {
-    font-size: 50px;
+    font-size: 30px;
     color: #efedf0da;
 }
 
 .lobby span{
-    font-size: 85px;
+    padding: 10px 0px;
+    font-size: 60px;
     color: #6a0392;
 }
-
-/*Animation Text page lobby*/
-
-/* .name {
-    position: relative;
-}
-
-.name::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    border-left: 2px solid #ffffff;
-
-    animation: typing 2s steps(10) normal;
-    background: #121212;
-} */
-
-/*finish animation text page lobby*/
 
 .lobby-button {
     display: flex;
@@ -130,12 +126,12 @@ header {
 }
 
 .lobby-button button {
-    width: 200px;
-    height: 75px;
+    width: 130px;
+    height: 55px;
     align-items: center;
     font-family: "Poppins";
     color: #ffffff;
-    font-size: 25px;
+    font-size: 15px;
     letter-spacing: 0.3px;
 
     cursor: pointer;
@@ -147,8 +143,8 @@ header {
 }
 
 .lobby-button img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -159,7 +155,7 @@ header {
 
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .linkedin::before, .linkedin::after{
@@ -167,8 +163,8 @@ header {
     z-index: -1;
     border-radius: 8px;
     position: absolute;
-    width: 205px;
-    height: 80px;
+    width: 135px;
+    height: 60px;
     background: linear-gradient(45deg, #8400ff 0%, #340077 49%, #4400ff 80%, #2600ff 100%);
     background-size: 100%;
     animation: bording 8s linear infinite;
@@ -181,7 +177,7 @@ header {
 .lobby-button .github {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     background: #121212;
     border-radius: 8px;
     border: 2px solid transparent;
@@ -192,8 +188,8 @@ header {
     z-index: -1;
     border-radius: 8px;
     position: absolute;
-    width: 205px;
-    height: 80px;
+    width: 135px;
+    height: 60px;
     background: linear-gradient(45deg, #ffffff 0%, #c69bff 49%, #803ffa 80%, #6f00ff 100%);
     background-size: 100%;
     animation: bording 8s linear infinite;
@@ -203,13 +199,39 @@ header {
     filter: blur(10px)
 }
 
+    /*Lado direito do lobby*/
+
 .lobby-right {
-    width: 50%;
+    width: 40%;
 }
 
 .lobby-right img {
-    width: 800px;
-    height: 700px;
+    width: 500px;
+    height: 400px;
+}
+
+ /*Scroll lobby*/
+
+.scrolling {
+    background: #121212;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+
+    color: white;
+}
+
+.scrolling a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /*Page Sobre Mim*/
@@ -232,59 +254,256 @@ header {
     margin-top: 40px;
 
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 20px;
     color: #efedf0da;
 }
 
 .sobre-mim-description h3 {
-    font-size: 25px;
+    font-size: 20px;
     margin: 40px 0;
 }
 
 .sobre-mim-description .text {
-    font-size: 25px;
+    font-size: 17px;
     font-family: 'Inter';
 }
 
 .sobre-mim-buttons {
-    width: 200px;
-    height: 75px;
+    width: 150px;
+    height: 55px;
+
     font-family: "Poppins";
     color: #ffffff;
-    font-size: 25px;
+    font-size: 10px;
     letter-spacing: 0.3px;
 
     cursor: pointer;
 }
 
-.sobre-mim-buttons button {
-    font-family: 'Montserrat';
-    font-size: 20px;
+.sobre-mim-buttons a {
+    font-family: 'Inter';
+    font-size: 10px;
+    font-weight: 900;
     color: #ffffff;
-}
+    position: relative;
 
-.curriculo {
-    margin-top: 50px;
-    width: 200px;
-    height: 75px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 10px;
+
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    background: transparent;
-    border-radius: 8px;
-    border: 3px solid #6a0392;
-
+    flex-direction: row;
     align-items: center;
+    text-transform: uppercase;
+    gap: 10px;
+
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 2px
+
 }
 
-.curriculo:hover {
-    transition: 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
+.sobre-mim-buttons img {
+    width: 25px;
+    height: 25px;
+}
+
+.sobre-mim-buttons a span {
+    position: absolute;
+    display: block;
+}
+
+.sobre-mim-buttons a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #9e05bd);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+
+
+.sobre-mim-buttons a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #9e05bd);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+.sobre-mim-buttons a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, #9e05bd);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+.sobre-mim-buttons a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #9e05bd);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+.sobre-mim a:hover {
+    background: #9e05bd;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #9e05bd,
+                0 0 25px #9e05bd,
+                0 0 50px #9e05bd,
+                0 0 100px #9e05bd;
 }
 
 .sobre-mim-img {
+    width: 90%;
+    height: 90%;
+}
+
+/*Experiencie Page*/
+
+.experience-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-page h1 {
+    text-transform: uppercase;
+    margin-top: 130px;
+    color: #efedf0da;
+}
+
+.container-experience {
+
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 10%;
+    padding-top: 100px;
+}
+
+.experience {
+    font-size: 20px;
+    height: 50vh;
+}
+
+.list-experience ul {
+    list-style: none;
+    width: 150px;
+    text-decoration: none;
+    padding: 0;
+}
+
+.list-experience li {
+    padding: 10px;
+
+    text-align: center;
+    border-left: 3px solid #9e05bd;
+
+    
+    font-size: 20px;
+}
+
+.list-experience {
+    height: 47px;
+}
+
+.list-experience:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease;
+}   
+
+.experience {
+    margin-left: 50px;
     width: 100%;
     height: 100%;
+    padding: 50px;
+    background: #151515;
+}
+
+.experience-description {
+    color: #efedf0da;
+}
+
+.experience-description h2 {
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
+.experience-local-text {
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 500;
+}
+
+.experience-description p a{
+    text-decoration: none;
+    color: rgb(163, 163, 163);
+}
+
+.experience-local {
+    font-size: 15px;
+    color: #6700ee;
+
+    padding: 30px 0px 40px 0px;
+}
+
+.date {
+    color: #efedf0da;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+/*Project Page*/
+.project {
+    background: #151515;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+
+    display: flex;
+}
+
+.project-left h1 {
+    color: #efedf0da;
+    text-transform: uppercase;
+}
+
+
+/*Footer*/
+footer {
+    background: #121212;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.9px;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer span {
+    color: #6f00ff;
 }
 
 /*Scroll Bar*/
@@ -314,5 +533,41 @@ header {
     }
     100% {
         background-position: 100%;
+    }
+}
+
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+}
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+}
+
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
     }
 }

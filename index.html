@@ -15,11 +15,11 @@
     <title>Profile Dev</title>
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar" id="menu">
         <a href="#home"><img  class="logo" src="./assets/img/logo.png" alt="Logo Gabriel Freitas em tag"></a>
         <nav>
-            <ul class="menu">
-                <a class="page" href="#Home">Home</a>
+            <ul class="menu" >
+                <a class="page" href="#home">Home</a>
                 <a class="page" href="#sobre">Sobre</a>
                 <a class="page" href="#experiencia">Experiencia</a>
                 <a class="page" href="#projetos">Projetos</a>
@@ -46,6 +46,9 @@
             <div class="lobby-right">
                 <img class="developer" src="./assets/img/lobbyright.png" alt="">
             </div>
+            <div class="scrolling">
+                <a href="#sobre"><p>Scroll down <h1>⇣</h1></p></a>
+            </div>
     </section>
     <section class="sobre-mim" id="sobre">
         <div class="sobre-mim-img">
@@ -54,19 +57,55 @@
         <div class="sobre-mim-description">
             <h2>SOBRE MIM</h2>
             <h3>Uberlândia, Minas Gerais</h3>
-            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis officiis tempore quidem totam voluptate quibusdam, accusantium veniam cupiditate non aliquam! Nisi ab nostrum corporis, sint amet impedit. Voluptate, saepe reiciendis?</p>
+            <p class="text"> Sou de Uberlândia, Minas Gerais, cursando Gestão da Informação na Universidade
+                Federal de Uberlândia (UFU). Formado no Nucleo de Preparação de Oficiais da Reserva (NPOR) em MG,
+                esse curso é realizado no Exército Brasileiro para se tornar um Aspirante-a-oficial da Reserva. Dedico meus
+                estudos na área de programação a 2 anos principalmente nas áreas Front-end e Back-end, atualmente estudando
+                Javascript, HTML, CSS, Git, NodeJs e entre outros, e em busca de aprimoramento na área de Desenvolvedor de Software.
+                <img src="./assets/img/javascript.svg" alt="Icone JS" width="27px" height="27px">
+                <img src="./assets/img/html.svg" alt="Icone HTML" width="34px" height="34px">
+                <img src="./assets/img/css3.svg" alt="Icone CSS" width="34px" height="34px">
+                </p>
             <div class="sobre-mim-buttons">
                 <a href="./assets/Gabriel_Freitas.pdf" download>
-                    <button class="curriculo">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                         <img src="./assets/img/document.png" alt="Nuvem de download">
                         Currículo
-                    </button>
                 </a>
             </div>
         </div>
     </section>
+    <section class="experience-page" id="experiencia">
+        <h1>Experiências</h1>
+        <div class="container-experience">
+            <div class="list-experience">
+                <ul>
+                    <span><a href=""></a><li class="experience1">👨‍💻💻</li></a></span>
+                </ul>
+            </div>
+            <div class="experience">
+                <span class="date">2023</span>
+                <div class="experience-description">
+                    <h2>Procurando uma oportunidade como Dev</h2>
+                    <p class="experience-local">Quem sabe na sua empresa 👀💻</p>
+                    <p class="experience-local-text">Pode me contatar pelo <a href="http://linkedin.com/in/gabriel-freitasdev">Linkedin</a> ou <a href="https://wa.me/553491036622">WhatsApp.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project" id="projetos">
+        <div class="project-left">
+            <h1>Projetos</h1>
+        </div>
+        <div class="project-right">
 
+        </div>
+    </section>
 
+    <footer>Desenvolvido por <span>Gabriel Freitas</span> ⭐</footer>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
