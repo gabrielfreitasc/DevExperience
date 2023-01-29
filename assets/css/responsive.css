@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 375px) {
     .navbar {
         flex-wrap: wrap;
         justify-content: center;
