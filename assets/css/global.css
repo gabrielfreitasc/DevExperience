@@ -3,6 +3,8 @@
 body {
     background: #121212;
     font-family: 'Montserrat';
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 header {
@@ -27,6 +29,14 @@ header {
     height: 80px;
     border-bottom: 3px solid #1d1c1c;
 }
+
+#menu-icon {
+    display: none;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+}
+
 
 .page {
     text-decoration: none;
@@ -97,10 +107,10 @@ header {
     /*Lado esquerdo do Lobby*/
 
 .lobby-left {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    margin-right: 80px;
+    margin-right: 70px;
 }
 
 .lobby h1 {
@@ -220,13 +230,14 @@ header {
 
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
 }
 
 .sobre-mim-description {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 40px;
+    margin: 40px 0px;
 
     font-family: 'Montserrat';
     font-size: 20px;
@@ -275,7 +286,6 @@ header {
     text-decoration: none;
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
     letter-spacing: 2px
 
 }
@@ -388,7 +398,6 @@ header {
     text-align: center;
     border-left: 3px solid #9e05bd;
 
-    
     font-size: 20px;
 }
 
@@ -658,3 +667,5 @@ footer span {
       bottom: 100%;
     }
 }
+
+/*Responsividade*/
