@@ -1,71 +1,207 @@
-@media (max-width: 1200px) {
+@media(max-width:1024px) {
+
+    .project-columns {
+        display: grid;
+        grid-template-columns: 390px 390px;
+        grid-template-rows: 490px 490px;
+    }
+
+    .lobby-left {
+        margin-right: 50px;
+    }
+
+    .lobby span {
+        font-size: 52px
+    }
+
+    .lobby-right img{
+        width: 400px;
+        height: 350px;
+    }
+
+}
+
+@media(min-width: 375px) {
     body {
-        overflow: visible;
+        overflow-x: hidden;
     }
 
-    .background-video {
-        display: none;
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 20px;
     }
 
-    .container {
-        justify-content: center;
-        height: auto;
-        flex-wrap: wrap; /*Vai quebrar o elemento jogando ele pra baixo do outro*/
-        gap: 30px;
+    #menu-icon {
+        display: block;
+        margin-right: 20px;
     }
 
-    .container .mario-img {
-        max-width: 50%;
-    }
-
-    .container .information {
+    .menu {
+        position: absolute;
+        top: 110%;
+        right: -100%;
+        width: 97%;
+        height: 29vh;
+        background: #6a0392;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.50s ease;
+    }
+
+    .menu a {
+        display: block;
+        margin: 12px 0px;
+        padding: 0px 25px;
+        transition: all 0.50s ease;
+    }
+
+    .menu a:hover {
+        color: #ffffff;
+        transform: translateY(5px);
+    }
+
+    .menu a.active {
+        color: red;
+    }
+
+    .menu.open {
+        right: 2%
+    }
+
+    .lobby {
+        display: flex;
+        justify-content: flex-start;
         flex-direction: column;
     }
 
-    .description {
+    .lobby-right img{
+        display: none;
+        width: 0%;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+
+    .lobby-left {
+        margin: 30px 0px;
+        width: 100%;
+    }
+
+    .lobby h1 {
+        font-size: 25px;
+    }
+
+    .lobby span {
+        padding: 10px 0px;
+        font-size: 33px
+    }
+
+    .lobby-button {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lobby-button button{
+        width: 130px;
+        height: 55px;
+    }
+
+    .sobre-mim {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 
-    .myname-text {
-        margin-left: 0px;
+    .sobre-mim-description {
+        margin: 40px 0 20px 0;
     }
-}
 
-@media (min-width: 375px) {
-    .navbar {
-        flex-wrap: wrap;
+    .sobre-mim-description h3 {
+        margin: 20px 0;
+    }
+
+    .sobre-mim-description .text {
+        font-size: 15px;
+    }
+
+    .sobre-mim-buttons {
+        display: flex;
         justify-content: center;
-        gap: 10px;
+        margin-left: 100px;
+        width: 140px;
+        height: 45px;
     }
 
-    .container .title-mario {
-        max-width: 75%;
+    .sobre-mim-buttons a {
+        gap: 5px
+
     }
 
-    .modal .close-modal {
-        width: 30px;
-        line-height: 30px;
+    .sobre-mim-img img{
+        width: 238px;
+        height: 232px;
     }
 
-    .modal #video {
-        width: 300px;
-        height: 169px;
+    .container-experience {
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 5px;
+        padding-right: 10px;
+        padding-top: 50px;
     }
 
-    .myname-text {
-        margin-left: 0px;
+    .experience {
+        width: 100%;
+        margin: 0px;
+        padding: 50px 30px 50px 40px;
     }
-}
 
-@media (max-width: 376px) {
-    .modal #video {
+    .experience-description {
         width: 250px;
-        height: 140px;
     }
 
-    .myname-text {
-        margin-left: 0px;
+    .experience-description h2 {
+        font-size: 20px
+    }
+
+    .experience-local-text {
+        font-size: 17px
+    }
+
+    .experience-local {
+        font-size: 13px
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .project-columns {
+        grid-template-columns: 300px;
+        grid-template-rows: 450px 450px 450px 450px;
+    }
+
+    .project_card-button a {
+        
+        display: inline-block;
+        margin-top: 20px;
+        padding: 7px 17px;
+        font-size: 14px;
+    }
+
+    .project_card-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        font-size: 13px; 
     }
 }
