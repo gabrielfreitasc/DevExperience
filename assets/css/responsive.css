@@ -21,7 +21,7 @@
 
 }
 
-@media(max-width: 800px) and (max-width: 750px) {
+@media(max-width: 800px) and (max-width: 750px){
     body {
         overflow-x: hidden;
     }
@@ -133,7 +133,7 @@
     .sobre-mim-buttons {
         display: flex;
         justify-content: center;
-        margin-left: 100px;
+        margin-left: 115px;
         width: 140px;
         height: 45px;
     }
@@ -204,4 +204,8 @@
     footer {
         font-size: 13px; 
     }
+}
+
+@media screen and (max-widht: 375px) {
+    
 }
