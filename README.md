@@ -16,9 +16,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Projeto de finâncias, em que o usuário pode organizar e controlar sua vida financeira, adicionando as entradas, saídas da conta. Possibilita também configurar as datas, a categoria e o valor de suas entradas e saídas. 
+O projeto tem por finalidade servir como um portifólio pessoal, em que apresento meus projetos de estudo e um pouco sobre mim, com a apresentação de currículo para possíveis entrevistas.
 
-- [Acesse o projeto finalizado, online](gabrielfreitasc.github.io/DevExperience/)
+- [Acesse o projeto finalizado, online](gabrielfreitasc.github.io/devexperience/)
 
 ## 🖼 Layout
 
