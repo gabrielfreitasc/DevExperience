@@ -1,0 +1,44 @@
+[
+  {
+    "id": "94313732",
+    "name": "Habits" ,
+    "tecnology": "React, React Native, Prisma, Typescript, Axios, TailwindCss...",
+    "image": "http://localhost:5173/static/image/habits.jpg",
+    "link": "https://github.com/gabrielfreitasc/Habits"
+  },
+  {
+    "id": "94313733",
+    "name": "Dev Finance",
+    "tecnology": "Javascript, HTML e CSS",
+    "image": "http://localhost:5173/static/image/devfinance.png",
+    "link": "https://github.com/gabrielfreitasc/Dev.Finance"
+  },
+  {
+    "id": "94313734",
+    "name": "GitHub Finder" ,
+    "tecnology": "React e Typescript",
+    "image": "http://localhost:5173/static/image/githubfinder.png",
+    "link": "https://github.com/gabrielfreitasc/GitHub.Finder"
+  },
+  {
+    "id": "94313735",
+    "name": "Dev Agenda" ,
+    "tecnology": "Nodejs, Javascript, Express, HTML e CSS",
+    "image": "http://localhost:5173/static/image/devagenda.png",
+    "link": "https://github.com/gabrielfreitasc/Dev-Agenda"
+  },
+  {
+    "id": "94313736",
+    "name": "Esports Profile" ,
+    "tecnology": "HTML e CSS",
+    "image": "http://localhost:5173/static/image/esports.png",
+    "link": "https://github.com/gabrielfreitasc/Esports-Profile"
+  },
+  {
+    "id": "94313737",
+    "name": "Desconhecido" ,
+    "tecnology": "Em breve",
+    "image": "http://localhost:5173/static/image/desconhecido.png",
+    "link": ""
+  }
+]
