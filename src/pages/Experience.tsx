@@ -7,7 +7,8 @@ export function Experience() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5173/static/courses.json")
+    // fetch("http://localhost:5173/static/courses.json")
+    fetch("https://gabrielfreitasc.github.io/DevExperience/static/courses.json")
       .then((response) => response.json())
       .then(setData);
   })

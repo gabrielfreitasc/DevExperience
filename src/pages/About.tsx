@@ -1,6 +1,8 @@
 import { ArrowDown } from "../components/ArrowDown";
 import { DiLinux, DiJsBadge, DiMysql } from 'react-icons/di'
 import { BiLogoTypescript, BiLogoReact, BiLogoDocker, BiLogoTailwindCss } from 'react-icons/bi'
+import avatar from '../../public/static/image/avatar.png'
+
 
 export function About() {
   return (
@@ -8,7 +10,7 @@ export function About() {
       <h1 className="text-7xl uppercase font-burtons pt-20 flex justify-center items-center gap-2 ">About <h1 className="text-violet-600">Me</h1></h1>
 
       <div className="border-4 border-violet-900 rounded-full w-32 h-32 mx-auto overflow-hidden mt-10 outline outline-offset-8 outline-2 outline-white">
-        <img src="../../public/avatar.png"></img>
+        <img src={avatar}></img>
       </div>
 
       <div className="flex flex-col justify-center items-center my-8">

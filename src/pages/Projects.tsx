@@ -8,7 +8,8 @@ export function Projects() {
 
 
   useEffect(() => {
-    fetch('http://localhost:5173/static/projects.json')
+    // fetch('http://localhost:5173/static/projects.json')
+    fetch('https://gabrielfreitasc.github.io/DevExperience/static/projects.json')
       .then((response) => response.json())
       .then(setData);
   }, []);

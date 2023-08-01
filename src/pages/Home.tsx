@@ -1,6 +1,7 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { generateTypeIt } from '../utils/generatetypeit';
 import { ArrowDown } from '../components/ArrowDown';
+import avatar from '../../public/static/image/avatar.png'
 
 export function Home() {
   const textGenerated = generateTypeIt()
@@ -26,7 +27,7 @@ export function Home() {
       </div>
 
       <div className='border-4 border-violet-900 rounded-full w-80 h-80 mx-auto overflow-hidden mt-52 hover:shadow-light-violet bg-cover ease-in-out duration-1000'>
-        <img src="../../public/avatar.png" alt="Avatar Programador"  className='w-full h-full'/>
+        <img src={avatar} alt="Avatar Programador"  className='w-full h-full'/>
       </div>
 
       <div className='flex col-span-2 justify-center'>
