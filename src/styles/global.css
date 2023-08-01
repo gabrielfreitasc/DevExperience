@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@font-face {
+    font-family: "suprecot";
+    src: url("./fonts/SuprecotVF.ttf");
+}
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+a {
+  text-decoration: none;
+}
+
+.background-animate {
+    background-size: 400%;
+
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 5s ease infinite;
+  }
+
+.swiper-pagination-bullet-active {
+  background: rgb(124 58 237 / var(--tw-text-opacity)) !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: rgb(124 58 237 / var(--tw-text-opacity)) !important;
+  transition: 200ms ease-in-out;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  color: rgb(46 16 101 / var(--tw-bg-opacity)) !important;
+}
+
+.swiper-button-prev {
+  transform: translateX(1550%)
+}
+
+.swiper-button-next {
+  transform: translateX(-1550%)
+}
+
+@keyframes AnimationName {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  ::-webkit-scrollbar {
+   width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(91 33 182 / var(--tw-bg-opacity));
+    border-radius: 5px;
+    transition: ease 300ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(46 16 101 / var(--tw-bg-opacity));
+}
