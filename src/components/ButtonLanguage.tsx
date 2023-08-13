@@ -33,7 +33,7 @@ export function ButtonLanguage() {
   }
 
   const optionLanguage = [
-    { id: 1, name: 'en', value: 'EN'},
+    { id: 1, name: 'en', value: 'US'},
     { id: 2, name: 'ptbr', value: 'BR'},
     { id: 3, name: 'es', value: 'ES'}
   ]
