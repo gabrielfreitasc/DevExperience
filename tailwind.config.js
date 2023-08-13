@@ -9,6 +9,9 @@ export default {
       colors: {
         default: "#09090A",
       },
+      screens: {
+        'xs': {'max':'425px'},
+      },
       fontFamily: {
         suprecot: "suprecot",
       },

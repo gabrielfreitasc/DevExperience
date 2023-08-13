@@ -2,7 +2,7 @@ import TypeIt from "typeit-react";
 
 export function generateTypeIt() {
   return (
-    <div>
+    <div >
       <TypeIt
         getBeforeInit={(instance) => {
           instance
