@@ -1,0 +1,29 @@
+{
+  "HOME_PAGE": {
+    "part1": "Ola 👋, yo soy",
+    "part2": "Desarrollador Front-End"
+  },
+  "ABOUT_PAGE": {
+    "title1": "Sobre",
+    "title2": "Mi",
+    "description": "Soy de Uberlândia, Minas Gerais. Actualmente estudio Gestión de la Información en la Universidad Federal de Uberlândia (UFU). Pasé un período como oficial en el Ejército Brasileño y dedicar mis estudios y trabajo en el área de Front-End y Back-End desarrollador, mi punto fuerte es el área de Front-End actualmente, la mejora de los estudios en tecnologías como Typescript, Javascript, Docker, Kubernetes, MySQL, React, TailwindCSS y entre otros."
+  },
+  "EXPERIENCE_PAGE": {
+    "title": "Experiencia",
+    "title2": "Cursos",
+    "title3": "Trabajo",
+    "ButtonDownload": "Curriculo"
+  },
+  "PROJECT_PAGE": {
+    "title": "Proyectos",
+    "button": "Ver Repositorio",
+    "tec": "Tecnologias"
+  },
+  "FOOTER": "Puede encontrar este proyecto completo en",
+  "HEADER": {
+    "nav1": "Inicio",
+    "nav2": "Sobre Mi",
+    "nav3": "Experiencia",
+    "nav4": "Proyectos"
+  }
+}
