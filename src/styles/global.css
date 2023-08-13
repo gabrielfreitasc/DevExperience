@@ -6,6 +6,17 @@
 }
 @tailwind utilities;
 
+:root {
+  --background: black;
+  --foreground: white;
+}
+
+[data-theme='light'] {
+  --background: black;
+  --foreground: white;
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +26,8 @@
 a {
   text-decoration: none;
 }
+
+
 
 .background-animate {
     background-size: 400%;

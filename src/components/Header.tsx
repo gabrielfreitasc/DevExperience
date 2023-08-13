@@ -9,15 +9,14 @@ import { NavBarDesktop } from './NavBarDesktop';
 import { ButtonLanguage } from './ButtonLanguage';
 
 export function Header() {
-  // // const [colorNav, setColorNav] = useState('#4c1d95');
   const [handleIcon, setHandleIcon] = useState(true)
 
   const toggleMenu = () => {
     setHandleIcon(!handleIcon);
-  };
+  }
 
   return (
-    <div className="fixed bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-bebas xs:bg-opacity-90">
+    <div className="fixed bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-bebas xs:bg-opacity-70">
 
     <div className='flex gap-10 justify-center items-center -z-20'>
       <Link activeClass="active" to='home' spy={true} smooth={true} offset={0} duration={500}>
@@ -25,8 +24,6 @@ export function Header() {
       </Link>
       <ButtonLanguage />
     </div>
-
-
 
     <div>
       <div className='hidden'>
@@ -45,6 +42,7 @@ export function Header() {
         {!handleIcon && (
           <nav
             className={`absolute md:hidden w-full h-[300px] translate-y-28 -z-10 rounded-sm -translate-x-2 items-center justify-center cursor-pointer transition-opacity duration-300 ease-in-out ${handleIcon ? 'opacity-0' : 'opacity-90'} ${handleIcon ? 'bg-transparent' : 'bg-white'}`}
+
           >
             <ul
               className='md:hidden flex flex-col gap-2 mx-3 mt-20 text-white'

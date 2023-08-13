@@ -39,7 +39,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className='border-4 border-violet-900 rounded-full xl:w-80 xl:h-80 mx-auto overflow-hidden mt-52 hover:shadow-light-violet hover:scale-110 bg-cover ease-in-out duration-1000 xs:-mt-5 xs:h-36 xs:flex'>
+      <div className='border-4 border-white rounded-full xl:w-80 xl:h-80 mx-auto overflow-hidden mt-52 hover:shadow-light-violet xs:shadow-light-violet hover:scale-110 bg-cover ease-in-out duration-1000 xs:-mt-5 xs:h-36 xs:flex'>
         <img src={avatar} alt="Avatar Programador"  className='w-full h-full'/>
       </div>
 
