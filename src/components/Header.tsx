@@ -17,9 +17,9 @@ export function Header() {
   };
 
   return (
-    <div className="fixed z-50 bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-bebas">
+    <div className="fixed bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-bebas xs:bg-opacity-90">
 
-    <div className='flex gap-10 justify-center items-center'>
+    <div className='flex gap-10 justify-center items-center -z-20'>
       <Link activeClass="active" to='home' spy={true} smooth={true} offset={0} duration={500}>
           <img src={logoIcon} alt="Logo Gabriel Freitas" className={`ml-4 w-20 h-20 hover:scale-125 ease-in duration-300 cursor-pointer xs:w-16 xs:h-16`}/>
       </Link>

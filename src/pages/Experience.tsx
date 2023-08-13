@@ -51,8 +51,8 @@ export function Experience() {
   })
 
   useEffect(() => {
-    // fetch("https://gabrielfreitasc.github.io/DevExperience/static/experiences.json")
-    fetch("http://localhost:5173/static/experiences.json")
+    // fetch("http://localhost:5173/static/experiences.json")
+    fetch("https://gabrielfreitasc.github.io/DevExperience/static/experiences.json")
       .then((response) => response.json())
       .then(setDataExperience);
   })
