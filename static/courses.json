@@ -1,23 +1,93 @@
 [
   {
     "id": "1",
-    "name": "Javascript e Typescript do Iniciante ao Avançado",
-    "link": "https://www.udemy.com/certificate/UC-fa8c3215-370a-4989-b26e-e387bb30f628/"
+    "name": "Javascript e Typescript do Iniciante ao Avancado",
+    "plataform": "Udemy",
+    "description": "Curso realizado na Udemy com o foco em aprender as tecnologias relacionadas as linguagem Javascript e Typescript, sendo elas, NodeJs, MongoDB, React, MySQL e entre outros.",
+    "link": "https://www.udemy.com/certificate/UC-fa8c3215-370a-4989-b26e-e387bb30f628/",
+    "skills": [
+      {
+        "id": "11",
+        "name": "typescript",
+        "icon": "SiTypescript"
+      },
+      {
+        "id": "12",
+        "name": "javascript",
+        "icon": "IoLogoJavascript"
+      },
+      {
+        "id": "13",
+        "name": "react",
+        "icon": "SiReact"
+      },
+      {
+        "id": "14",
+        "name": "mongodb",
+        "icon": "SiMongodb"
+      },
+      {
+        "id": "15",
+        "name": "mysql",
+        "icon": "SiMysql"
+      }
+    ]
   },
   {
     "id": "2",
-    "name": "Descomplicando Docker - Linuxtips",
-    "link": "https://drive.google.com/file/d/1mIWt7f4DfzBhoAQwrn0ToZnREVPZV_Ay/view"
+    "name": "Descomplicando Docker",
+    "plataform": "Linuxtips",
+    "description": "Curso realizado na Linuxtips, com o foco em compreender as mecanicas e funcionalidades do Docker e como integra-la com outras tecnologias, utilizando o Linux",
+    "link": "https://drive.google.com/file/d/1mIWt7f4DfzBhoAQwrn0ToZnREVPZV_Ay/view",
+    "skills": [
+      {
+        "id": "16",
+        "name": "docker",
+        "icon": "SiDocker"
+      }
+    ]
   },
   {
     "id": "3",
-    "name": "Linux Admin - Linuxtips",
-    "link": ""
+    "name": "Linux Admin",
+    "plataform": "Linuxtips",
+    "description": "Curso realizado na Linuxtips, com o foco em compreender e entender as funcionalidades, especificidades e atalhos para dominar o Linux e suas tecnologias",
+    "link": "",
+    "skills": [
+      {
+        "id": "17",
+        "name": "linux",
+        "icon": "SiLinux"
+      },
+      {
+        "id": "16",
+        "name": "docker",
+        "icon": "SiDocker"
+      }
+    ]
   },
   {
     "id": "4",
-    "name": "Programaçãpo Front-End - DevMedia",
-    "link": "https://www.devmedia.com.br/certificado/tecnologia/programacao/gabriel-freitas-4"
+    "name": "Programacao Front-End",
+    "plataform": "DevMedia",
+    "description": "Curso realizado na DevMedia, onde é apresentado o básico do HTML, CSS e JavaScript, dando início ao desenvolvimento web",
+    "link": "https://www.devmedia.com.br/certificado/tecnologia/programacao/gabriel-freitas-4",
+    "skills": [
+      {
+        "id": "12",
+        "name": "javascript",
+        "icon": "IoLogoJavascript"
+      },
+      {
+        "id": "18",
+        "name": "html",
+        "icon": "SiHtml5"
+      },
+      {
+        "id": "19",
+        "name": "css",
+        "icon": "SiCss3"
+      }
+    ]
   }
-
 ]
