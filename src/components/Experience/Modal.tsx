@@ -2,7 +2,6 @@ import { Collapse } from "react-collapse";
 import { AiOutlineLink } from "react-icons/ai";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiTypescript , SiReact, SiMongodb, SiMysql, SiDocker, SiLinux, SiHtml5, SiCss3 } from "react-icons/si";
-import { BsCircle } from 'react-icons/bs';
 import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 
 

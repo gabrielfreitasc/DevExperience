@@ -5,9 +5,10 @@ import { ArrowDown } from '../ArrowDown';
 import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 
 import curriculo from '../../../public/Curriculo_GabrielFreitas.pdf'
+import { fadeInAnimationVariants } from '../../utils/fadeInAnimationVariants';
 
 export function Work() {
-  const [isOpen, setIsOpen] = useState();
+  // const [isOpen, setIsOpen] = useState();
   const [dataExperience, setDataExperience] = useState([]);
 
   const { t } = useTranslation("global");
@@ -22,7 +23,15 @@ export function Work() {
   if(!dataExperience || !dataExperience.length) return null;
 
   return(
-    <div className='w-full h-full flex flex-col font-suprecot bg-gradient-to-tl from-violet-950 via-black to-default background-animate pt-10'>
+    <motion.div
+      className='w-full h-full flex flex-col font-suprecot bg-gradient-to-tl from-violet-950 via-black to-default background-animate pt-10'
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+    >
       <h2 className='font-suprecot flex justify-center text-5xl xs:text-4xl'>{t("EXPERIENCE_PAGE.title3")}</h2>
       <div className='flex flex-col justify-center items-center'>
         {dataExperience.map((item) => {
@@ -55,6 +64,6 @@ export function Work() {
       <div className='col-span-2 flex justify-center items-center h-[40%] xs:hidden'>
         <ArrowDown data='project' />
       </div>
-    </div>
+    </motion.div>
   );
 }
