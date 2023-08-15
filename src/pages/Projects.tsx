@@ -22,7 +22,7 @@ export function Projects() {
   return (
     <motion.div
       id="project"
-      className="w-full h-full overflow-hidden bg-gradient-to-tl from-violet-950 via-black to-default font-suprecot background-animate xs:mt-[100%]"
+      className="w-full h-full overflow-hidden bg-gradient-to-bl from-violet-950 via-black to-default font-suprecot background-animate "
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"

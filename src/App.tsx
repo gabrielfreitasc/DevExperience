@@ -12,6 +12,7 @@ import translation_es from '../public/locales/es/translation_es.json';
 
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next'
+import { Work } from './components/Experience/Work'
 
 export function App() {
   i18next.init({
@@ -32,6 +33,7 @@ export function App() {
           <Home />
           <About />
           <Experience />
+          <Work />
           <Projects />
           <Footer />
         </div>
