@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 import curriculo from '../../public/Curriculo_GabrielFreitas.pdf'
 import { useTranslation } from 'react-i18next';
+import { Courses } from '../components/Experience/Courses';
 
 const fadeInAnimationVariantsY = {
   initial: {
@@ -72,81 +73,45 @@ export function Experience() {
       }}
     >
       <h1 className="text-7xl uppercase font-burtons pt-20 flex justify-center items-center gap-2 xs:text-5xl">{t("EXPERIENCE_PAGE.title")}</h1>
-      <div className="grid grid-cols-2 grid-rows-2 mt-5 xs:grid-cols-none xs:grid-rows-none xs:flex xs:flex-col">
-        <div className='border-violet-600 h-[430px] xs:my-14 xs:flex xs:flex-col xs:justify-center xs:items-center'>
-          <h2 className="font-suprecot flex justify-center text-5xl xs:text-4xl">{t("EXPERIENCE_PAGE.title2")}</h2>
 
-          {dataCourses.map((item) => {
-            const { id, name, link } = item;
-            return (
-              <motion.span
-                key={id}
-                className="font-sans flex items-center w-[55%] gap-6 ml-10 my-6 p-2 border-l-2 border-violet-500 hover:border-violet-700 hover:bg-zinc-800 ease-in-out duration-300"
-                variants={fadeInAnimationVariantsY}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}
-                custom={id}
-              >
-                <h3>{name}</h3>
-                <a href={link} target='_blank' className="border-2 border-white bg-white rounded-full ease-in-out duration-300 hover:bg-zinc-300 hover:border-zinc-300 transition-all" onMouseEnter={() => setisShow(true)} onMouseLeave={() => setisShow(false)}>
-                  {isShow ? (
-                    <GrFormView size={20}  />
-                  ) : (
-                    <GrFormViewHide size={20} />
-                  )}
-                </a>
-              </motion.span>
-            );
-          })}
-        </div>
-        <motion.div
-          variants={fadeInAnimationVariantsY}
-          initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
-          className='border-l-2 border-violet-600 xs:border-none xs:mt-5 flex flex-col items-center'
-        >
-          <h2 className='font-suprecot flex justify-center text-5xl xs:text-4xl'>{t("EXPERIENCE_PAGE.title3")}</h2>
+      {/*/     <h2 className='font-suprecot flex justify-center text-5xl xs:text-4xl'>{t("EXPERIENCE_PAGE.title3")}</h2>
 
-          <div className='flex flex-col justify-center items-center'>
-            {dataExperience.map((item) => {
-              const { id, name, local, date } = item;
-              return (
-                  <motion.div
-                    key={id}
-                    className='flex flex-col items-center w-auto h-auto rounded-md font-sans border-2  my-6 p-2 border-violet-500 hover:border-violet-700 hover:bg-violet-950 hover:bg-opacity-30 ease-in-out duration-200 xs:w-[80%] xs:text-center'
-                    variants={fadeInAnimationVariantsX}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}
-                    custom={id}
-                  >
-                    <h3>{name}</h3>
-                    <p className='w-[80%] text-center my-1 text-zinc-300'>{local}</p>
-                    <p className='text-cyan-400'>{date}</p>
-                  </motion.div>
-              );
-            })
+      //     <div className='flex flex-col justify-center items-center'>
+      //       {dataExperience.map((item) => {
+      //         const { id, name, local, date } = item;
+      //         return (
+      //             <motion.div
+      //               key={id}
+      //               className='flex flex-col items-center w-auto h-auto rounded-md font-sans border-2  my-6 p-2 border-violet-500 hover:border-violet-700 hover:bg-violet-950 hover:bg-opacity-30 ease-in-out duration-200 xs:w-[80%] xs:text-center'
+      //               variants={fadeInAnimationVariantsX}
+      //               initial="initial"
+      //               whileInView="animate"
+      //               viewport={{
+      //                 once: true,
+      //               }}
+      //               custom={id}
+      //             >
+      //               <h3>{name}</h3>
+      //               <p className='w-[80%] text-center my-1 text-zinc-300'>{local}</p>
+      //               <p className='text-cyan-400'>{date}</p>
+      //             </motion.div>
+      //         );
+      //       })
 
-            }
-          </div>
+      //       }
+      //     </div>
 
-            <a href={curriculo} download target='_blank' className='text-2xl flex justify-center items-center w-auto hover:scale-105 ease-in-out duration-300 border-2 border-violet-800 px-4 py-2 gap-3 rounded-md  hover:bg-violet-800 hover:border-violet-800 hover:shadow-light-violet'>
-            {t("EXPERIENCE_PAGE.ButtonDownload")} <BsFillFileEarmarkPdfFill />
-            </a>
-        </motion.div>
+      //       <a href={curriculo} download target='_blank' className='text-2xl flex justify-center items-center w-auto hover:scale-105 ease-in-out duration-300 border-2 border-violet-800 px-4 py-2 gap-3 rounded-md  hover:bg-violet-800 hover:border-violet-800 hover:shadow-light-violet'>
+      //       {t("EXPERIENCE_PAGE.ButtonDownload")} <BsFillFileEarmarkPdfFill />
+      //       </a>
+      //   </motion.div>
 
-        <div className='col-span-2 flex justify-center items-center h-[40%] xs:hidden'>
-          <ArrowDown data='project' />
-        </div>
-      </div>
+      //   <div className='col-span-2 flex justify-center items-center h-[40%] xs:hidden'>
+      //     <ArrowDown data='project' />
+      //   </div>
+      // </div> */}
+
+      <Courses />
     </motion.div>
   );
 }

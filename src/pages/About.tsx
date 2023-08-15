@@ -21,7 +21,7 @@ export function About() {
         once: true,
       }}
     >
-      <h1 className="text-7xl uppercase font-burtons pt-20 flex justify-center items-center gap-2 xs:text-5xl">{t("ABOUT_PAGE.title1")} <h1 className="text-violet-600">{t("ABOUT_PAGE.title2")}</h1></h1>
+      <h1 className="text-7xl uppercase font-burtons pt-10 flex justify-center items-center gap-2 xs:text-5xl">{t("ABOUT_PAGE.title1")} <h1 className="text-violet-600">{t("ABOUT_PAGE.title2")}</h1></h1>
 
       <div className="border-4 border-violet-900 rounded-full w-32 h-32 mx-auto overflow-hidden mt-10 outline outline-offset-8 outline-2 outline-white xs:w-24 xs:h-24">
         <img src={avatar}></img>

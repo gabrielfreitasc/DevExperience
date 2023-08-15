@@ -55,7 +55,7 @@ export function ButtonLanguage() {
             open: { rotate: 180 },
             closed: { rotate: 0 }
           }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.3 }}
           style={{ originY: 0.55 }}
         >
           <IoIosArrowDown size={16}/>

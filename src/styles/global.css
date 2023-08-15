@@ -4,7 +4,14 @@
     font-family: "suprecot";
     src: url("./fonts/SuprecotVF.ttf");
 }
+@font-face {
+    font-family: 'poppins';
+    src: url("./fonts/Poppins.ttf")
+
+}
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --background: black;

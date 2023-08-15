@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         suprecot: "suprecot",
+        sans: "poppins"
       },
       boxShadow: {
         "default": "0 0 10px 0 #6d28d9",

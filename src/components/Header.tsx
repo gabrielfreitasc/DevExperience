@@ -16,7 +16,7 @@ export function Header() {
   }
 
   return (
-    <div className="fixed bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-bebas xs:bg-opacity-70">
+    <div className="fixed z-50 bg-black bg-opacity-10 shadow-lg flex flex-row h-20 items-center justify-between p-2 w-full font-sans xs:bg-opacity-70">
 
     <div className='flex gap-10 justify-center items-center -z-20'>
       <Link activeClass="active" to='home' spy={true} smooth={true} offset={0} duration={500}>
@@ -41,7 +41,7 @@ export function Header() {
 
         {!handleIcon && (
           <nav
-            className={`absolute md:hidden w-full h-[300px] translate-y-28 -z-10 rounded-sm -translate-x-2 items-center justify-center cursor-pointer transition-opacity duration-300 ease-in-out ${handleIcon ? 'opacity-0' : 'opacity-90'} ${handleIcon ? 'bg-transparent' : 'bg-white'}`}
+            className={`absolute md:hidden w-full h-[300px] -z-10 translate-y-28 rounded-sm -translate-x-2 items-center justify-center cursor-pointer transition-opacity duration-300 ease-in-out ${handleIcon ? 'opacity-0' : 'opacity-90'} ${handleIcon ? 'bg-transparent' : 'bg-white'}`}
 
           >
             <ul
