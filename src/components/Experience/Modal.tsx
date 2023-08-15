@@ -10,7 +10,7 @@ interface IModal {
   description: string;
   link: string;
   idItem: boolean;
-  skills: void;
+  skills: any;
 }
 
 export function Modal({openDescription, description, link, idItem, skills}: IModal) {
@@ -32,7 +32,7 @@ export function Modal({openDescription, description, link, idItem, skills}: IMod
             <div className="grid grid-flow-row grid-cols-3 gap-2 h-20 ml-2 xs:flex xs:items-center">
               <a href={link} target="_blank" className="absolute right-14 hover:rotate-6 hover:scale-110 ease-in-out duration-300 xs:bg-violet-950 xs:p-2 xs:rounded-full"><AiOutlineLink size={30}/></a>
 
-            {skills.map((skill) => (
+            {skills.map((skill: any) => (
               <div className="">
                 <div key={skill.id} className="w-auto h-8 bg-violet-500 p-2 rounded-full group-hover:scale-110 group-hover:rotate-12 ease-linear duration-700">
                   {skill.icon === 'SiTypescript' && <SiTypescript />}

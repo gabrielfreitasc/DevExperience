@@ -1,44 +1,44 @@
 import { useEffect, useState } from 'react';
-import { GrFormView, GrFormViewHide } from 'react-icons/gr';
-import { ArrowDown } from '../components/ArrowDown';
-import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
+// import { GrFormView, GrFormViewHide } from 'react-icons/gr';
+// import { ArrowDown } from '../components/ArrowDown';
+// import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 import { fadeInAnimationVariants } from '../utils/fadeInAnimationVariants';
 import { motion } from "framer-motion";
 
-import curriculo from '../../public/Curriculo_GabrielFreitas.pdf'
+// import curriculo from '../../public/Curriculo_GabrielFreitas.pdf'
 import { useTranslation } from 'react-i18next';
 import { Courses } from '../components/Experience/Courses';
 
-const fadeInAnimationVariantsY = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (id: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.10 * id,
-    }
-  }),
-}
+// const fadeInAnimationVariantsY = {
+//   initial: {
+//     opacity: 0,
+//     y: 100,
+//   },
+//   animate: (id: number) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: 0.10 * id,
+//     }
+//   }),
+// }
 
-const fadeInAnimationVariantsX = {
-  initial: {
-    opacity: 0,
-    x: 200,
-  },
-  animate: (id: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.05 * id,
-    }
-  }),
-}
+// const fadeInAnimationVariantsX = {
+//   initial: {
+//     opacity: 0,
+//     x: 200,
+//   },
+//   animate: (id: number) => ({
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       delay: 0.05 * id,
+//     }
+//   }),
+// }
 
 export function Experience() {
-  const [isShow, setisShow] = useState(false);
+  // const [isShow, setisShow] = useState(false);
   const [dataCourses, setDataCoursers] = useState([]);
   const [dataExperience, setDataExperience] = useState([]);
 
