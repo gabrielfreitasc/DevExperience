@@ -24,7 +24,7 @@ export function Work() {
 
   return(
     <motion.div
-      className='w-full h-full flex flex-col font-suprecot bg-gradient-to-tl from-violet-950 via-black to-default background-animate pt-10'
+      className='w-full h-full flex flex-col font-suprecot bg-gradient-to-tl from-violet-950 via-black to-default background-animate pt-10 xs:pt-0'
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"

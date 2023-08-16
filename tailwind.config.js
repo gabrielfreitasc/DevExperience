@@ -21,8 +21,12 @@ export default {
         "light-violet": `0 0 5px rgb(91 33 182 / var(--tw-bg-opacity)),
                         0 0 25px rgb(91 33 182 / var(--tw-bg-opacity)),
                         0 0 50px rgb(91 33 182 / var(--tw-bg-opacity)),
-                        0 0 100px rgb(91 33 182 / var(--tw-bg-opacity))`
+                        0 0 100px rgb(91 33 182 / var(--tw-bg-opacity))`,
+        "light": `-2px -1px 5px 0 var(--tw-shadow-color)`,
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: [],

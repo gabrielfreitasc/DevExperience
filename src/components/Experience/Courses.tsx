@@ -13,8 +13,8 @@ export function Courses() {
   const { t } = useTranslation("global");
 
   useEffect(() => {
-    // fetch("https://gabrielfreitasc.github.io/DevExperience/static/courses.json")
-    fetch("http://localhost:5173/static/courses.json")
+    // fetch("http://localhost:5173/static/courses.json")
+    fetch("https://gabrielfreitasc.github.io/DevExperience/static/courses.json")
     .then((response) => response.json())
     .then(setDataCourses);
   })
