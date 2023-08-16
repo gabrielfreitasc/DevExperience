@@ -22,7 +22,7 @@ export default {
                         0 0 25px rgb(91 33 182 / var(--tw-bg-opacity)),
                         0 0 50px rgb(91 33 182 / var(--tw-bg-opacity)),
                         0 0 100px rgb(91 33 182 / var(--tw-bg-opacity))`,
-        "light": `-2px -1px 5px 0 var(--tw-shadow-color)`,
+        "custom": `5px 5px 8px #00000046, -5px -5px 8px #4f475200`,
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

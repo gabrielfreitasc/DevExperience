@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
+
 @font-face {
     font-family: "suprecot";
     src: url("./fonts/SuprecotVF.ttf");
 }
+
 @font-face {
     font-family: 'poppins';
     src: url("./fonts/Poppins.ttf")
@@ -11,18 +13,10 @@
 }
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 :root {
   --background: black;
   --foreground: white;
 }
-
-[data-theme='light'] {
-  --background: black;
-  --foreground: white;
-}
-
 
 * {
   padding: 0;
@@ -34,8 +28,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .background-animate {
     background-size: 400%;
 
@@ -43,6 +35,13 @@ a {
     -moz-animation: AnimationName 3s ease infinite;
     animation: AnimationName 5s ease infinite;
   }
+
+.icon-animate {
+  animation: ScrollIcon 30s linear infinite;
+}
+.icon-animate:hover {
+  animation-play-state: paused;
+}
 
 .swiper-pagination-bullet-active {
   background: rgb(124 58 237 / var(--tw-text-opacity)) !important;
@@ -74,6 +73,15 @@ a {
       background-position: 100% 50%;
     }
   }
+
+@keyframes ScrollIcon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
 
   ::-webkit-scrollbar {
    width: 12px;

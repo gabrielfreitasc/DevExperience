@@ -1,31 +1,14 @@
 import { ArrowDown } from "../components/ArrowDown";
-import { DiLinux, DiJsBadge, DiMysql } from 'react-icons/di'
-import { ReactOriginalIcon, LinuxOriginalIcon, JavascriptOriginalIcon, NextjsOriginalIcon, TypescriptOriginalIcon, NodejsOriginalIcon, DockerOriginalIcon, TailwindcssOriginalWordmarkIcon, MysqlOriginalIcon } from 'react-devicons'
-import { BiLogoTypescript, BiLogoReact, BiLogoDocker, BiLogoTailwindCss, BiLogoNodejs } from 'react-icons/bi'
-import { motion, useAnimate } from "framer-motion";
-import avatar from '../../public/static/image/avatar.png'
-
-import { fadeInAnimationVariants } from '../utils/fadeInAnimationVariants'
+import { fadeInAnimationVariants } from '../utils/fadeInAnimationVariants';
+import { iconsCarousel } from '../utils/iconsCarousel';
 import { useTranslation } from 'react-i18next';
-import { SiNextdotjs } from "react-icons/si";
-import { useEffect } from 'react';
+import { motion } from "framer-motion";
 
-const iconsCarousel = [
-  {"id": "1", "name":<LinuxOriginalIcon size={40} />},
-  {"id": "2", "name":<JavascriptOriginalIcon size={40} />},
-  {"id": "3", "name":<NextjsOriginalIcon size={40} />},
-  {"id": "4", "name":<TypescriptOriginalIcon size={40} />},
-  {"id": "5", "name":<ReactOriginalIcon size={40} />},
-  {"id": "6", "name":<NodejsOriginalIcon size={40}/>},
-  {"id": "7", "name":<DockerOriginalIcon size={55} />},
-  {"id": "8", "name":<BiLogoTailwindCss size={50} color="#30bdff"/>},
-  {"id": "9", "name":<MysqlOriginalIcon size={40} />}
-]
+import avatar from '../../public/static/image/avatar.png'
 
 
 export function About() {
   const { t } = useTranslation("global");
-  const [scope, animate] = useAnimate();
 
   return (
     <motion.div
@@ -67,20 +50,26 @@ export function About() {
           }}
           >
           {/* <h3>SKILLS:</h3> */}
-        <motion.li
-          className="flex gap-10 items-center xs:gap-20"
-          animate={{x: [-1000, 850]}}
-          transition={{duration: 15, ease: "linear", repeat: Infinity}}
+        <li
+          className="flex gap-10 items-center xs:gap-20 icon-animate"
         >
           {iconsCarousel.map(icon => {
             const { id, name } = icon;
             return(
-              <div key={id} className="group bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-md h-20 w-20 flex justify-center items-center shadow-default hover:shadow-light hover:shadow-zinc-300 ease-in-out duration-300 xs:scale-150 xs:hover:shadow-default">
+              <div key={id} className="group bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-md h-20 w-20 flex justify-center items-center hover:shadow-custom hover:border-l-2 hover:border-t-2 hover:border-zinc-500 linear duration-100 xs:scale-150 xs:hover:shadow-default">
                 <div className="grayscale group-hover:grayscale-0 ease-in-out duration-300">{name}</div>
               </div>
             );
           })}
-        </motion.li>
+          {iconsCarousel.map(icon => {
+            const { id, name } = icon;
+            return(
+              <div key={id} className="group bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-md h-20 w-20 flex justify-center items-center hover:shadow-custom hover:border-l-2 hover:border-t-2 hover:border-zinc-500 linear duration-100 xs:scale-150 xs:hover:shadow-default">
+                <div className="grayscale group-hover:grayscale-0 ease-in-out duration-300">{name}</div>
+              </div>
+            );
+          })}
+        </li>
 
         </motion.span>
       </div>
