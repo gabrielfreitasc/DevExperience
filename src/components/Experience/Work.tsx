@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
+import { ArrowDown } from '../ArrowDown';
+import { ModalWork } from './ModalWork';
+import { fadeInAnimationVariants } from '../../utils/fadeInAnimationVariants';
+import { MdWorkOutline } from 'react-icons/md'
+import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
+import { IoIosArrowDown } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowDown } from '../ArrowDown';
-import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 
 import curriculo from '../../../public/Curriculo_GabrielFreitas.pdf'
-import { fadeInAnimationVariants } from '../../utils/fadeInAnimationVariants';
 
 export function Work() {
-  // const [isOpen, setIsOpen] = useState();
   const [dataExperience, setDataExperience] = useState([]);
+  const [opened, setOpened] = useState(false);
+  const [isOpen, setIsOpen] = useState(dataExperience[0]);
 
   const { t } = useTranslation("global");
 
@@ -33,28 +37,49 @@ export function Work() {
       }}
     >
       <h2 className='font-suprecot flex justify-center text-5xl xs:text-4xl'>{t("EXPERIENCE_PAGE.title3")}</h2>
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex flex-col items-center'>
         {dataExperience.map((item) => {
-          const { id, name, local, date } = item;
+          const { id, name, local, date, description, frameworks } = item;
           return (
               <motion.div
                 key={id}
-                className='flex flex-col items-center min-w-[400px] min-h-[100px] rounded-md font-sans border-2  my-6 p-2 border-violet-500 hover:border-violet-700 hover:bg-violet-950 hover:bg-opacity-30 ease-in-out duration-200 xs:w-[80%] xs:text-center xs:min-w-0 xs:px-2'
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: true,
-                }}
-                custom={id}
+                className='group w-[500px] flex-col font-sans border-2 my-4 p-4 bg-zinc-300 ease-in-out duration-200 xs:w-[80%] xs:text-center xs:min-w-0 xs:px-2'
+                onClick={() => setIsOpen(id)}
+                onTap={() => setOpened(!opened)}
+                initial={false}
+                animate={opened ? 'open' : 'closed'}
               >
-                <h3>{name}</h3>
-                <p className='w-[80%] text-center my-1 text-zinc-300'>{local}</p>
-                <p className='text-cyan-600'>{date}</p>
+                <div className='flex justify-between items-center pb-2   h-auto'>
+                  <motion.div className='group-hover:rotate-6 ease-in-out duration-700'>
+                    <MdWorkOutline size={30} color="#09090A"/>
+                  </motion.div>
+
+                  <div className="flex-col justify-center items-center mx-5 text-black">
+                    <h3>{name}</h3>
+                    <p className='text-center my-1 text-black'>{local}</p>
+                  </div>
+
+                  <motion.div
+                    className='border-default group-hover:scale-110 ease-in-out duration-200 cursor-pointer'
+                    variants={{ open: {rotate: 180}, closed: {rotate: 0} }}
+                    transition={{ duration: 0.2 }}
+                    style={{ originY: 0.55 }}
+                  >
+                    <IoIosArrowDown size={30} color="#09090A"/>
+                  </motion.div>
+
+                </div>
+                <div>
+                  <div>
+                    {isOpen === id && opened === true ? (<ModalWork isOpen={isOpen} date={date} description={description} frameworks={frameworks} />) : null}
+                  </div>
+                </div>
               </motion.div>
           );
           })
         }
       </div>
+
       <div className='w-full flex items-center justify-center'>
         <a href={curriculo} download target='_blank' className='text-2xl flex justify-center items-center w-40 hover:scale-105 ease-in-out duration-300 border-2 border-violet-800 px-4 py-2 gap-3 rounded-md  hover:bg-violet-800 hover:border-violet-800 hover:shadow-light-violet'>
           {t("EXPERIENCE_PAGE.ButtonDownload")} <BsFillFileEarmarkPdfFill />

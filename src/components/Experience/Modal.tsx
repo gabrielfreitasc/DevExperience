@@ -28,12 +28,12 @@ export function Modal({openDescription, description, link, idItem, skills}: IMod
       >
         <Collapse isOpened={openDescription}>
           <div className="flex items-center xs:w-full xs:flex-col xs:items-start">
-            <p className="w-2/3 font-sans text-base xs:w-full">{description}</p>
-            <div className="grid grid-flow-row grid-cols-3 gap-2 h-20 ml-2 xs:flex xs:w-full xs:items-center">
-              <a href={link} target="_blank" className="absolute ml-40 hover:rotate-6 hover:scale-110 ease-in-out duration-300 xs:bg-violet-950 xs:p-2 xs:rounded-full xs:right-10"><AiOutlineLink size={30}/></a>
+            <p className="w-2/3 font-sans text-base text-justify xs:w-full">{description}</p>
+            <div className="grid grid-flow-row grid-cols-3 gap-2 h-20 ml-10 xs:flex xs:w-full xs:items-center">
+              <a href={link} target="_blank" className="absolute ml-[135px] hover:rotate-6 hover:scale-110 ease-in-out duration-300 xs:bg-violet-950 xs:p-2 xs:rounded-full xs:right-10"><AiOutlineLink size={30}/></a>
 
             {skills.map((skill: any) => (
-              <div key={skill.id} className="group-hover:scale-110 group-hover:rotate-12 ease-linear duration-700 ">
+              <div key={skill.id} className="group-hover:scale-110 group-hover:rotate-12 ease-linear duration-700">
                 <motion.div
                   className={`w-auto h-8 bg-violet-500 p-2 rounded-full ${skill.name === 'empty' ? 'bg-violet-950' : ''} ${skill.name === 'empty' ? 'xs:p-4' : ''}`}
                   initial={{opacity: 0, scale: 0}}

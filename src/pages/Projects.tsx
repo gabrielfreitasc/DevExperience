@@ -30,7 +30,7 @@ export function Projects() {
         once: true,
       }}
     >
-      <h1 className="text-7xl uppercase font-burtons pt-20 flex justify-center items-center gap-2 xs:text-5xl xs:mt-3">{t("PROJECT_PAGE.title")}</h1>
+      <h1 className="text-7xl uppercase font-burtons pt-20 flex justify-center items-center gap-2 xs:text-5xl xs:mt-14">{t("PROJECT_PAGE.title")}</h1>
 
       <div className='flex justify-evenly items-center'>
       <Swiper
