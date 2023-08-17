@@ -3,12 +3,18 @@
     "id": 1,
     "name": "Aspirante-a-Oficial do Exército Brasileiro",
     "local": "Uberlândia - MG",
-    "date": "Início: 2023 | Término: 2023"
+    "date": "Início: 2023 | Término: 2023",
+    "description": "Cumprir as funções a tribuições designadas ao oficial de infantaria do Exército Brasileiro, comandando um pelotão constituido, realizando a preparação intelectual, psicológica e física dos militares subordinados.",
+    "frameworks": [
+    ]
   },
   {
     "id": 10,
-    "name": "Xxxxxx xxxxx|xxxxx xxxxxX ",
+    "name": "",
     "local": "Comming Soon..",
-    "date": "Xxxxxx xxxxx|xxxxx xxxxxX "
+    "date": "",
+    "description": "Comming Soon...",
+    "frameworks": [
+    ]
   }
 ]
