@@ -6,7 +6,7 @@ import { MdWorkOutline } from 'react-icons/md'
 import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { LayoutGroup, motion, useMotionValue } from 'framer-motion';
 
 import curriculo from '../../../public/Curriculo_GabrielFreitas.pdf'
 
@@ -47,7 +47,7 @@ export function Work() {
                 onClick={() => setIsOpen(id)}
                 onTap={() => setOpened(!opened)}
                 initial={false}
-                animate={opened ? 'open' : 'closed'}
+                animate={isOpen === id && opened === true ? 'open' : 'closed'}
               >
                 <div className='flex justify-between items-center pb-2   h-auto'>
                   <motion.div className='group-hover:rotate-6 ease-in-out duration-700'>
@@ -59,14 +59,17 @@ export function Work() {
                     <p className='text-center my-1 text-black'>{local}</p>
                   </div>
 
-                  <motion.div
-                    className='border-default group-hover:scale-110 ease-in-out duration-200 cursor-pointer'
-                    variants={{ open: {rotate: 180}, closed: {rotate: 0} }}
-                    transition={{ duration: 0.2 }}
-                    style={{ originY: 0.55 }}
-                  >
-                    <IoIosArrowDown size={30} color="#09090A"/>
-                  </motion.div>
+                  <LayoutGroup id={id}>
+                    <motion.div
+                      className='border-default group-hover:scale-110 ease-in-out duration-200 cursor-pointer'
+                      variants={{ open: {rotate: 180}, close: {rotate: 0} }}
+                      transition={{ duration: 0.2 }}
+                      style={{ originY: 0.55 }}
+                      key={id}
+                    >
+                      <IoIosArrowDown size={30} color="#09090A"/>
+                    </motion.div>
+                  </LayoutGroup>
 
                 </div>
                 <div>
