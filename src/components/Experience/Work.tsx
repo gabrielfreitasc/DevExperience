@@ -6,7 +6,7 @@ import { MdWorkOutline } from 'react-icons/md'
 import { BsFillFileEarmarkPdfFill } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
-import { LayoutGroup, motion, useMotionValue } from 'framer-motion';
+import { LayoutGroup, motion } from 'framer-motion';
 
 import curriculo from '../../../public/Curriculo_GabrielFreitas.pdf'
 
