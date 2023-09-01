@@ -6,18 +6,21 @@ import { motion } from 'framer-motion';
 import { fadeInAnimationVariants } from '../utils/fadeInAnimationVariants';
 import { useTranslation } from 'react-i18next';
 
+import { useGithubAutomatedRepos, StackIcon, IGithubRepos } from 'github-automated-repos/index';
+
 export function Projects() {
-  const [data, setData] = useState([]);
   const { t } = useTranslation("global");
+  const { dataReposGithub } = useGithubAutomatedRepos()
+  const [repository, setRepository] = useState<IGithubRepos[]>([])
+
+
 
   useEffect(() => {
-    // fetch('http://localhost:5173/static/projects.json')
-    fetch('https://gabrielfreitasc.github.io/DevExperience/static/projects.json')
-      .then((response) => response.json())
-      .then(setData);
-  }, []);
-
-  if(!data || !data.length) return null;
+    {/*Put here your github Name*/ }
+    fetch('https://api.github.com/users/gabrielfreitasc/repos?sort=created&per_page=999')
+      .then(response => response.json())
+      .then(data => setRepository(dataReposGithub(data, 'deploy'))); {/*<-- keyWord*/}
+  }, [])
 
   return (
     <motion.div
@@ -42,21 +45,30 @@ export function Projects() {
         navigation
         className='flex justify-center items-center'
         >
-          {data.map((item) => {
-            const { id, name, tecnology, link, image } = item;
+
+          {repository.map((item) => {
             return (
-              <SwiperSlide key={id}>
-                <div className='flex-none translate-x-[186%] p-4 m-10 mt-20 bg-zinc-800 bg-opacity-70 h-96 w-[20%] rounded-md shadow-default hover:scale-105 ease-in-out duration-300 xs:w-[70%] xs:translate-x-[8%] xs:my-10 xs:'>
+              <SwiperSlide key={item.id}>
+                <div className='flex-none translate-x-[186%] p-4 m-10 mt-20 bg-zinc-800 bg-opacity-70 h-96 w-[20%] rounded-md shadow-default xs:w-[70%] xs:translate-x-[8%] xs:my-10 xs:'>
                   <div>
-                    <img src={image} alt={name} className='-mt-[20%] rounded-lg shadow-default hover:scale-105 ease-in-out duration-300 bg-violet-950'/>
+                      <a href={item.homepage}>
+                        <img src={`/static/image/${item.name.toLocaleLowerCase().replace('-', '').trim()}.png`} alt={item.name} className='-mt-[20%] shadow-l rounded-lg shadow-default hover:scale-105 hover:brightness-75 cursor-pointer ease-in-out duration-300 bg-violet-950'/>
+                      </a>
                   </div>
 
                   <div className='flex flex-col justify-center items-center my-5'>
-                    <span className='text-3xl mb-5'>{name}</span>
+                    <span className='text-3xl mb-3'>{item.name.replace('-', ' ')}</span>
                     <span className='font-sans font-semibold'>{t("PROJECT_PAGE.tec")}</span>
-                    <span className='font-sans text-violet-600 text-center'>{tecnology}</span>
+                    <span className='w-[80%] flex flex-wrap justify-center mt-5 gap-3 items-center'>
+                      {item.topics.map((icon) => {
+                        return (
+                            <StackIcon key={icon} className="stack_icons" iconItem={icon} />
+                        )
+                      })}
+                    </span>
+                    {/* <span className='font-sans text-violet-600 text-center'>{tecnology}</span> */}
 
-                    <a href={link} target='_blank' className='text-2xl mt-10 hover:scale-105 ease-in-out duration-300 border-2 border-violet-800 flex items-center px-4 py-2 gap-3 rounded-md  hover:bg-violet-800 hover:border-violet-800 hover:shadow-light-violet'>
+                    <a href={item.html_url} target='_blank' className='text-2xl mt-5 hover:scale-105 ease-in-out duration-300 border-2 border-violet-800 flex items-center px-4 py-2 gap-3 rounded-md  hover:bg-violet-800 hover:border-violet-800 hover:shadow-light-violet'>
                       {t("PROJECT_PAGE.button")}<BsGithub size={20}/>
                     </a>
                   </div>

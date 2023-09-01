@@ -5,14 +5,14 @@ import { About } from './pages/About'
 import { Experience } from './pages/Experience'
 import { Projects } from './pages/Projects'
 import { Footer } from './components/Footer'
+import { Work } from './components/Experience/Work';
 
 import translation_en from '../public/locales/en/translation_en.json';
 import translation_ptbr from '../public/locales/pt-br/translation_ptbr.json';
 import translation_es from '../public/locales/es/translation_es.json';
 
 import i18next from 'i18next';
-import { I18nextProvider } from 'react-i18next'
-import { Work } from './components/Experience/Work'
+import { I18nextProvider } from 'react-i18next';
 
 export function App() {
   i18next.init({

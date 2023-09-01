@@ -32,7 +32,12 @@ export function Courses() {
           return (
             <div key={id} id={id} className="flex items-center xs:w-full xs:flex-col xs:items-start">
               <div className="flex gap-4 w-1/2 ml-20 xs:w-auto xs:ml-8">
-                <motion.button onTap={() => setOpened(!opened)} onClick={() => setOpenDescription(id)} transition={{duration: 0.3}} className={`group inset-0 w-12 h-12 p-2 border-2 border-violet-800 rounded-full bg-transparent flex items-center bg-gradient-to-r hover:bg-gradient-to-r from-violet-800 to-purple-950 cursor-pointer ease-in-out duration-500 ${openDescription !== id && "bg-none"}`}>
+                <motion.button
+                  onTap={() => setOpened(!opened)}
+                  onClick={() => setOpenDescription(id)}
+                  transition={{duration: 0.3}}
+                  className={`group inset-0 w-12 h-12 p-2 border-2 border-violet-800 rounded-full bg-transparent flex items-center bg-gradient-to-r hover:bg-gradient-to-r from-violet-800 to-purple-950 cursor-pointer ease-in-out duration-500 ${openDescription !== id && "bg-none"}`}
+                >
                   <PiGraduationCap size={30} className="group-hover:rotate-6 ease-linear duration-500"/>
                 </motion.button>
                 <div className="flex flex-col">
