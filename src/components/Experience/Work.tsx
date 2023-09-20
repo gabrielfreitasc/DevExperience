@@ -8,7 +8,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 import { LayoutGroup, motion } from 'framer-motion';
 
-import curriculo from '../../../public/Curriculo_GabrielFreitas.pdf'
+import curriculo from '../../../public/GabrielFreitasCoelho_DESENVOLVEDOR-FRONT-END.pdf'
 
 export function Work() {
   const [dataExperience, setDataExperience] = useState([]);

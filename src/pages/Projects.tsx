@@ -52,7 +52,7 @@ export function Projects() {
                 <div className='flex-none translate-x-[186%] p-4 m-10 mt-20 bg-zinc-800 bg-opacity-70 h-96 w-[20%] rounded-md shadow-default xs:w-[70%] xs:translate-x-[8%] xs:my-10 xs:'>
                   <div>
                       <a href={item.homepage}>
-                        <img src={`/static/image/${item.name.toLocaleLowerCase().replace('-', '').trim()}.png`} alt={item.name} className='-mt-[20%] shadow-l rounded-lg shadow-default hover:scale-105 hover:brightness-75 cursor-pointer ease-in-out duration-300 bg-violet-950'/>
+                        <img src={`https://gabrielfreitasc.github.io/DevExperience/static/image/${item.name.toLocaleLowerCase().replace('-', '').replace('.', '').trim()}.png`} alt={item.name} className='-mt-[20%] shadow-l rounded-lg shadow-default hover:scale-105 hover:brightness-75 cursor-pointer ease-in-out duration-300 bg-violet-950'/>
                       </a>
                   </div>
 
