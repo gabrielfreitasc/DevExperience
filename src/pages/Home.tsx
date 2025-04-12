@@ -1,7 +1,7 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { generateTypeIt } from '../utils/generatetypeit';
 import { ArrowDown } from '../components/ArrowDown';
-import avatar from '../../public/static/image/avatar.png'
+import avatar from '../../public/static/image/avatar.jpeg'
 import { motion } from 'framer-motion';
 import { fadeInAnimationVariants } from '../utils/fadeInAnimationVariants';
 import { useTranslation } from 'react-i18next';
