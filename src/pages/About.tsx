@@ -4,7 +4,7 @@ import { iconsCarousel } from '../utils/iconsCarousel';
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
 
-import avatar from '../../public/static/image/avatar.png'
+import avatar from '../../public/static/image/avatar.jpeg'
 
 
 export function About() {
